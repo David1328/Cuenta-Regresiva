@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cuenta Regresiva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+    <link rel="shortcut icon" href="Todos.jpg">
+    <style>
+        .cuentaRegresiva {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .cuentaRegresiva .titulo {
+            display: flex;
+            margin-bottom: 3%;
+            font-size: 4vw;
+        }
+
+        .cuentaRegresiva .perfiles {
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            /* border-radius: 50% 50% 50% 50%; */
+            margin-bottom: 3%;
+        }
+
+        .cuentaRegresiva .perfiles img {
+            width: 30%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50% 50% 50% 50%;
+        }
+
+        .cuentaRegresiva div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function onPageLoad() {
+            // Tu código aquí para ejecutar después de que la página se ha cargado completamente
+            console.log("La página se ha cargado completamente.");
+
+            // Llamada al método para iniciar la cuenta regresiva
+            startCountdown();
+        }
+
+        function startCountdown() {
+            // Establecer la fecha objetivo (24 de enero)
+            var targetDate = new Date('2024-01-24T00:00:00');
+
+            // Calcular la diferencia de tiempo
+            var timeDifference = targetDate - new Date();
+
+            // Inicializar FlipClock
+            var clock = $('.reloj').FlipClock(timeDifference / 1000, {
+                clockFace: 'DailyCounter',
+                countdown: true
+            });
+        }
+
+        window.onload = onPageLoad;
+    </script>
+</head>
+
+<body>
+    <!-- Cuenta Regresiva-->
+    <div class="cuentaRegresiva">
+        <!-- titulo -->
+        <div class="titulo">
+            CUENTA REGRESIVA PASEO CRESPO Y JAVI
+        </div>
+        <!-- Imagenes -->
+        <div class="perfiles">
+            <img src="javi.PNG" alt=""><img src="Crespo.PNG" alt=""><img src="David.PNG" alt="">
+        </div>
+        <div class="reloj"></div>
+    </div>
+</body>
+
+</html>
