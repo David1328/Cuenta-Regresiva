@@ -1,0 +1,38 @@
+.cuentaRegresiva {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.cuentaRegresiva .titulo {
+    display: flex;
+    margin-bottom: 3%;
+    font-size: 4vw;
+}
+
+.cuentaRegresiva .perfiles {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border-radius: 50% 50% 50% 50%; */
+    margin-bottom: 3%;
+}
+
+.cuentaRegresiva .perfiles img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50% 50% 50% 50%;
+}
+
+.cuentaRegresiva div {
+    display: flex;
+    justify-content: center;
+}
