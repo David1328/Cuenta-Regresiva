@@ -17,11 +17,11 @@
 }
 
 .cuentaRegresiva .perfiles {
-    width: 50%;
+    width: 60%;
     height: auto;
     display: flex;
-    justify-content: space-between;
-    /* border-radius: 50% 50% 50% 50%; */
+    /* justify-content: space-between;
+    border-radius: 50% 50% 50% 50%; */
     margin-bottom: 3%;
 }
 
