@@ -9,7 +9,7 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
-    <link rel="shortcut icon" href="Todos.jpg">
+    <link rel="shortcut icon" href="imagenes/Aleja.jpeg">
     <script type="text/javascript">
         function onPageLoad() {
             // Tu código aquí para ejecutar después de que la página se ha cargado completamente
@@ -21,7 +21,7 @@
 
         function startCountdown() {
             // Establecer la fecha objetivo (24 de enero)
-            var targetDate = new Date('2024-05-15T23:00:00');
+            var targetDate = new Date('2024-06-03T23:00:00');
 
             // Calcular la diferencia de tiempo
             var timeDifference = targetDate - new Date();
@@ -39,11 +39,55 @@
 </head>
 
 <body>
+    <div>
+        <style>
+            .balloon {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                animation: balloon-float 1s linear infinite, balloon-fall 4s linear infinite;
+            }
+            @keyframes balloon-float {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-50px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+            @keyframes balloon-fall {
+                0% {
+                    transform: translateY(-100px);
+                }
+                100% {
+                    transform: translateY(100vh);
+                }
+            }
+        </style>
+        <script>
+            function createBalloon() {
+                const balloon = document.createElement('img');
+                balloon.classList.add('balloon');
+                balloon.src="C:/Users/David/Desktop/confeti/imageGlobo.png";
+                balloon.style.left = `${Math.random() * window.innerWidth}px`;
+                balloon.style.top = `${Math.random() * window.innerHeight}px`;
+                document.body.appendChild(balloon);
+                setTimeout(() => {
+                    balloon.remove();
+                }, 20000); // Remove balloon after 5 seconds
+            }
+        
+            setInterval(createBalloon, 900); // Create a new balloon every second
+        </script>
+    </div>
     <!-- Cuenta Regresiva-->
     <div class="cuentaRegresiva">
         <!-- titulo -->
         <div class="titulo">
-            CUENTA REGRESIVA UNBOXING DE MAQUILLAJE
+            CUENTA REGRESIVA PARA CUMPLE DEL AMOR
         </div>
         <!-- Imagenes -->
         <div class="perfiles">
